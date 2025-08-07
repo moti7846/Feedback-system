@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שליחת תלונה אנונימית - צה"ל</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>📝 שליחת תלונה אנונימית</h1>
+    <p class="subtitle">הזן את פרטי התלונה שלך - פרטיותך מובטחת</p>
+  </header>
+
+  <main>
+    <form action="/submit" method="POST" class="complaint-form" id="complaintForm">
+
+      <fieldset class="form-group">
+        <label for="category">תחום התלונה *</label>
+        <select name="category" id="category" required class="form-select">
+          <option value="">בחר תחום</option>
+          <option value="Food">אוכל</option>
+          <option value="Equipment">ציוד</option>
+          <option value="Orders">פקודות</option>
+          <option value="Other">אחר</option>
+          
+        </select>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="message">תוכן התלונה *</label>
+        <textarea name="message" id="message" required placeholder="תאר את הבעיה או התלונה בפירוט..." class="form-textarea" minlength="5" maxlength="1000"></textarea>
+        <output class="char-counter">
+          <span id="charCount">0</span>
+        </output>
+      </fieldset>
+
+      <section class="privacy-reminder">
+        <p>🔒 <strong>תזכורת:</strong> התלונה תישלח באופן אנונימי לחלוטין. פרטיך האישיים לא נשמרים במערכת.</p>
+      </section>
+
+      <section class="form-actions">
+        <button type="submit" class="button button-primary">שלח תלונה</button>
+        <a href="/" class="butto

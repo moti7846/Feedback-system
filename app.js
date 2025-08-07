@@ -11,8 +11,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(logger)
 
+app.post('/submit' ,(req, res) => {
+    res.json(req.body)
+});
 app.use(express.static('./public'))
-
 
 app.use((req, res) => {
     res.status(404).json({ msg: "Route not found." });
